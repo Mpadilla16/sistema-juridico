@@ -16,16 +16,17 @@ public class ActuacionParte {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_actuacion_parte")
     private Integer idActuacionParte;
 
     @ManyToOne
-    @JoinColumn(name = "id_actuacion")
+    @JoinColumn(name = "id_actuacion", nullable = false)
     private Actuacion actuacion;
 
-    @Column(name = "nombre_actuacion")
+    @Column(name = "nombre_actuacion", nullable = false, length = 100)
     private String nombreActuacion;
 
-    @Column(name = "presentado_por")
+    @Column(name = "presentado_por", nullable = false, length = 100)
     private String presentadoPor;
 
     @Column(name = "fecha")

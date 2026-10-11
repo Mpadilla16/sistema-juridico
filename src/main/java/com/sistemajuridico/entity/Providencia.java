@@ -19,7 +19,7 @@ public class Providencia {
     private Integer idProvidencia;
 
     @ManyToOne
-    @JoinColumn(name = "id_actuacion")
+    @JoinColumn(name = "id_actuacion", nullable = false)
     private Actuacion actuacion;
 
     @Column(name = "fecha_estado")
@@ -28,7 +28,7 @@ public class Providencia {
     @Column(name = "numero_estado")
     private Integer numeroEstado;
 
-    @Column(name = "tipo_auto")
+    @Column(name = "tipo_auto", length = 100)
     private String tipoAuto;
 
     @Column(name = "descripcion")

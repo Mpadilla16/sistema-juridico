@@ -13,19 +13,20 @@ import java.time.LocalDate;
 @Entity
 @Table(name = "gestion_externa")
 public class GestionExterna {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_gestion_externa")
     private Integer idGestionExterna;
 
     @ManyToOne
-    @JoinColumn(name = "id_actuacion")
+    @JoinColumn(name = "id_actuacion", nullable = false)
     private Actuacion actuacion;
 
-    @Column(name = "tipo_memorial")
+    @Column(name = "tipo_memorial", length = 100)
     private String tipoMemorial;
 
-    @Column(name = "estado_envio")
+    @Column(name = "estado_envio", length = 20)
     private String estadoEnvio;
 
     @Column(name = "fecha_envio")
@@ -36,6 +37,4 @@ public class GestionExterna {
 
     @Column(name = "interrumpe_desistimiento")
     private Boolean interrumpeDesistimiento;
-
-
 }

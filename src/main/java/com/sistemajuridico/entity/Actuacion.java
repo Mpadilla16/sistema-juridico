@@ -26,10 +26,10 @@ public class Actuacion {
     private Integer idActuacion;
 
     @ManyToOne
-    @JoinColumn(name = "id_proceso")
+    @JoinColumn(name = "id_proceso", nullable = false)
     private Proceso proceso;
 
     @ManyToOne
-    @JoinColumn(name = "id_tipo_actuacion")
+    @JoinColumn(name = "id_tipo_actuacion", nullable = false)
     private TipoActuacion tipoActuacion;
 }

@@ -25,49 +25,49 @@ public class Proceso {
     @Column(name = "id_proceso")
     private Integer idProceso;
 
-    @Column(name = "etapa_procesal")
+    @Column(name = "etapa_procesal", nullable = false, length = 100)
     private  String etapaProcesal;
 
-    @Column(name = "tramo")
+    @Column(name = "tramo", length = 50)
     private String tramo;
 
-    @Column(name = "numero_titulo_valor")
+    @Column(name = "numero_titulo_valor", length = 100)
     private String numeroTituloValor;
 
-    @Column(name = "tipo_proceso")
+    @Column(name = "tipo_proceso", nullable = false,length = 50)
     private String tipoProceso;
 
     @Column(name = "pretensiones")
     private BigDecimal pretensiones;
 
-    @Column(name = "departamento")
+    @Column(name = "departamento", length = 100)
     private String departamento;
 
-    @Column(name = "ciudad")
+    @Column(name = "ciudad",length = 100)
     private String ciudad;
 
-    @Column(name = "cuantia")
+    @Column(name = "cuantia", nullable = false,length = 100)
     private String cuantia;
 
-    @Column(name = "entidad")
+    @Column(name = "entidad",length = 100)
     private String entidad;
 
-    @Column(name = "especialidad")
+    @Column(name = "especialidad", nullable = false, length = 50)
     private String especialidad;
 
     @Column(name = "fecha_presentacion")
     private LocalDate fechaPresentacion;
 
-    @Column(name = "medidas_solicitadas")
+    @Column(name = "medidas_solicitadas",length = 255)
     private String medidasSolicitadas;
 
     @Column(name = "porcentaje_embargo")
     private BigDecimal porcentajeEmbargo;
 
-    @Column(name = "link_exp")
+    @Column(name = "link_exp",length = 255)
     private String linkExp;
 
-    @Column(name = "estado")
+    @Column(name = "estado", nullable = false)
     private Boolean estado;
 
 

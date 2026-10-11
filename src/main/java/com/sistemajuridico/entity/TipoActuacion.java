@@ -17,7 +17,7 @@ public class TipoActuacion {
     @Column(name = "id_tipo_actuacion")
     private Integer idTipoActuacion;
 
-    @Column(name = "nombre_tipo")
+    @Column(name = "nombre_tipo",length = 50)
     private String nombreTipo;
 
 
