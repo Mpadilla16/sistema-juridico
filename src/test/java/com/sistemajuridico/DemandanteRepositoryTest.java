@@ -18,6 +18,15 @@ class DemandanteRepositoryTest {
     void consultarDemandantes() {
         var demandantes = demandanteRepository.findAll();
 
+        var encontrados = demandanteRepository
+                .findByNombreDemandanteContainingIgnoreCase("María");
+
+        System.out.println("Cantidad encontrados con María: " + encontrados.size());
+
+        encontrados.forEach(demandante ->
+                System.out.println(demandante.getNombreDemandante())
+        );
+
         System.out.println("Cantidad de demandantes: " + demandantes.size());
 
         demandantes.forEach(demandante ->
